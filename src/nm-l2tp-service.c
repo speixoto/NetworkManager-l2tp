@@ -1120,7 +1120,7 @@ nm_l2tp_config_write (NML2tpPlugin *plugin,
 	/* value = nm_setting_vpn_get_data_item (s_vpn, NM_L2TP_KEY_GATEWAY); */
 	write_config_option (ipsec_fd, "  right=%s\n", priv->saddr);
 	value = nm_setting_vpn_get_data_item (s_vpn, NM_L2TP_KEY_IPSEC_GATEWAY_ID);
-	if(value)write_config_option (ipsec_fd, "  rightid=@%s\n", value);
+	if(value)write_config_option (ipsec_fd, "  rightid=%s\n", value);
 	write_config_option (ipsec_fd,
 "  esp=3des-sha1\n"
 "  keyexchange=ike\n"
