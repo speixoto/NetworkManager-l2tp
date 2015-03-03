@@ -1122,11 +1122,7 @@ nm_l2tp_config_write (NML2tpPlugin *plugin,
 	value = nm_setting_vpn_get_data_item (s_vpn, NM_L2TP_KEY_IPSEC_GATEWAY_ID);
 	if(value)write_config_option (ipsec_fd, "  rightid=%s\n", value);
 	write_config_option (ipsec_fd,
-"  esp=3des-sha1\n"
-"  keyexchange=ike\n"
-"  ike=3des-sha1-modp1024\n"
-"  aggrmode=no\n"
-"  forceencaps=yes\n");
+"  rekey=yes\n");
 
 
 
